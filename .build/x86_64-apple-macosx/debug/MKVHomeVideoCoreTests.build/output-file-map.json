@@ -1,0 +1,82 @@
+{
+  "": {
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/primary.swiftdeps"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/AppViewModelTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/AppViewModelTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/AppViewModelTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/AppViewModelTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/AppViewModelTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/AppViewModelTests.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/ConversionQueueControllerTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/ConversionQueueControllerTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/ConversionQueueControllerTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/ConversionQueueControllerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/ConversionQueueControllerTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/ConversionQueueControllerTests.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/FFmpegCommandBuilderTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegCommandBuilderTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegCommandBuilderTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegCommandBuilderTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegCommandBuilderTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegCommandBuilderTests.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/FFmpegJobRunnerTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegJobRunnerTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegJobRunnerTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegJobRunnerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegJobRunnerTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegJobRunnerTests.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/FFmpegProgressParserTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegProgressParserTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegProgressParserTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegProgressParserTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegProgressParserTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegProgressParserTests.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/FFmpegToolchainLocatorTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegToolchainLocatorTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegToolchainLocatorTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegToolchainLocatorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegToolchainLocatorTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/FFmpegToolchainLocatorTests.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/OutputPathResolverTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/OutputPathResolverTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/OutputPathResolverTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/OutputPathResolverTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/OutputPathResolverTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/OutputPathResolverTests.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/PackageSmokeTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/PackageSmokeTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/PackageSmokeTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/PackageSmokeTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/PackageSmokeTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/PackageSmokeTests.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/PackagingTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/PackagingTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/PackagingTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/PackagingTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/PackagingTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/PackagingTests.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/QueueProjectStoreTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/QueueProjectStoreTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/QueueProjectStoreTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/QueueProjectStoreTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/QueueProjectStoreTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/QueueProjectStoreTests.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/VideoMetadataTests.swift": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/VideoMetadataTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/VideoMetadataTests.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/VideoMetadataTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/VideoMetadataTests.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/debug/MKVHomeVideoCoreTests.build/VideoMetadataTests.dia"
+  }
+}

@@ -1,0 +1,17 @@
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Bootstrap.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Domain/AppIdentity.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Domain/ConversionJob.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Domain/PackagingInfo.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Domain/VideoMetadata.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/FFmpegCommandBuilder.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/FFmpegJobRunner.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/FFmpegMetadataTagMapper.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/FFmpegProgressParser.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/FFmpegToolchainLocator.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/ProcessRunner.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Intake/MediaFileIntake.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Intake/MediaProbe.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Intake/OutputPathResolver.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Queue/AppViewModel.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Queue/ConversionQueueController.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Queue/QueueProjectStore.swift

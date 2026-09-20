@@ -1,0 +1,31 @@
+# SDD ledger — plan: docs/superpowers/plans/2026-09-19-mkv-home-video-converter.md
+
+Pre-flight: Task 2 models → Tasks 3–7 consumers: consistent value-model boundary.
+Pre-flight: Task 3 output resolver → Task 7 import consumer: consistent safe URL boundary.
+Pre-flight: Task 4 toolchain/command → Tasks 5–7 consumers: consistent command and toolchain boundary.
+Pre-flight: Task 5 runner → Task 6 queue: consistent async outcome boundary.
+Pre-flight: Task 6 queue → Task 7 UI: consistent observable state boundary.
+Ruling: The provided workspace is not a Git repository, so linked worktrees, commits, task scripts, and range-based review packages are unavailable. Work in the supplied folder with this ledger and command-output evidence instead — cost if wrong: no commit history or git diff for the final reviewer.
+Task 1: Ruling: Swift Testing labels are not addressable by the plan's `swift test --filter PackageSmokeTests/appIdentityIsStable` on this toolchain; the command ran zero tests. Use `swift test` for task gates so the named test demonstrably runs — cost if wrong: a future suite run may take longer than a focused filter.
+Task 1: complete (no commits: non-Git workspace; tests: swift test → 1/1 Swift Testing passed; swift build → successful)
+Task 2: complete (no commits: non-Git workspace; tests: swift test → 4/4 Swift Testing passed)
+Task 3: complete (no commits: non-Git workspace; tests: swift test → 8/8 Swift Testing passed)
+Task 4: Ruling: Reordered the metadata test's named initializer arguments to Swift declaration order (`description` before `genre`) so its failure was caused by the missing command builder, not a test compile error — cost if wrong: no product behavior change.
+Task 4: Ruling: Added a decoded-ffprobe subtitle-ordinal test and corrected stream indexing; FFmpeg's `0:s:N` selector is relative to subtitle streams, not the full stream list — cost if wrong: a valid text subtitle could be omitted or the wrong subtitle selected.
+Task 4: complete (no commits: non-Git workspace; tests: swift test → 14/14 Swift Testing passed)
+Task 5: complete (no commits: non-Git workspace; tests: swift test → 18/18 Swift Testing passed)
+Task 6: Ruling: Queue JSON uses Swift's default Date strategy instead of ISO-8601 because the platform ISO encoder removes fractional seconds and broke an exact project round-trip. Diagnostic evidence: 0.9368-second timestamp loss; default encoding round-trips exactly — cost if wrong: JSON timestamps are numeric rather than human-readable.
+Task 6: complete (no commits: non-Git workspace; tests: swift test → 22/22 Swift Testing passed)
+Task 7: Ruling: Added a testable FFmpeg job-runner seam (probe + command execution protocols) so the native UI's batch queue invokes the same command path covered by core tests — cost if wrong: a small additional abstraction around process execution.
+Task 7: Ruling: The sandbox blocks `swift run` from using Swift's system module cache; an approved unsandboxed launch completed its build and remained running until deliberately interrupted, but native UI accessibility enumeration did not expose the process. Treat visual setup-screen inspection as pending user/desktop verification — cost if wrong: a layout-only issue could remain despite the successful app build.
+Task 7: complete (no commits: non-Git workspace; tests: swift test → 26/26 Swift Testing passed; swift build → successful)
+Final review: Critical 1 fixed — import reserves on-disk outputs, the job runner refuses a newly occupied target, and FFmpeg uses `-n` rather than overwrite mode; regression tests `adding a source reserves an MP4 that already exists on disk`, `job runner refuses to replace an output that appears before execution`, and command no-clobber assertions RED→GREEN, suite 38/38.
+Final review: Important 2 fixed — arbitrary selected FFmpeg paths validate their sibling ffprobe directly, and the selected toolchain is retained for conversion; tests `an arbitrary selected FFmpeg location is validated directly` and `selected toolchain is the toolchain used for conversion` RED→GREEN, suite 38/38.
+Final review: Important 3 fixed — changing the output folder reallocates pending jobs against disk and queue reservations; test `changing the destination reallocates pending jobs into the selected folder` RED→GREEN, suite 38/38.
+Final review: Important 4 fixed — queue restoration occurs once during app-model initialization, no window task restores it, and an executing controller refuses replacement; test `restore cannot replace active queue state` GREEN, suite 38/38.
+Final review: Important 5 fixed — corrupt queue JSON is moved to a timestamped `queue.corrupt-*.json` file and load/save failures remain observable to the UI; test `a corrupt project is preserved before reporting a recovery error` RED→GREEN, suite 38/38.
+Final review: Important 6 fixed — batch metadata includes Movie/TV profile, all Movie and TV fields, and artwork; per-item metadata supports explicit inherited-field clearing through persisted `clearedFields`; tests `batch metadata can set TV profile and shared TV fields` and `an explicit field clear wins over a shared metadata value` RED→GREEN, suite 38/38.
+Final review: Important 7 fixed — FFmpeg stderr is bounded and stored with nonzero exit outcomes, while preflight errors are typed; test `the process runner returns bounded FFmpeg diagnostics on failure` and `queue retains actionable conversion diagnostics` GREEN, suite 38/38.
+Final review: Ruling — deferred only minor findings (folder drops do not recurse, numeric entry validation is basic, the preview fallback has no dedicated Convert button, and output filename is not displayed in every row) — cost if wrong: these UX limitations remain visible but do not affect output integrity or batch conversion behavior.
+Task 8: complete (no commits: non-Git workspace; final `swift test` → 38/38 Swift Testing passed; `Scripts/build-app.sh` → release `dist/MKV Home Video.app`; executable and Info.plist verified)
+Final integration ruling: applied the finishing-development-branch workflow; no Git metadata or branches exist in this workspace, so there is no merge, pull-request, or commit option — cost if wrong: the delivered app remains a local bundle without version-control history.

@@ -1,0 +1,11 @@
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/AppViewModelTests.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/ConversionQueueControllerTests.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/FFmpegCommandBuilderTests.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/FFmpegJobRunnerTests.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/FFmpegProgressParserTests.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/FFmpegToolchainLocatorTests.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/OutputPathResolverTests.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/PackageSmokeTests.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/PackagingTests.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/QueueProjectStoreTests.swift
+/Users/peterbertella/Documents/ChatGPT/MKV/Tests/MKVHomeVideoCoreTests/VideoMetadataTests.swift

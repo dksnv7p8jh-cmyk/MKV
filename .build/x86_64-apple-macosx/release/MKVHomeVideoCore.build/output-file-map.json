@@ -1,0 +1,109 @@
+{
+  "": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/MKVHomeVideoCore.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/MKVHomeVideoCore.o",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/primary.swiftdeps"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Bootstrap.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/Bootstrap.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/Bootstrap~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/Bootstrap.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/Bootstrap.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Domain/AppIdentity.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/AppIdentity.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/AppIdentity~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/AppIdentity.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/AppIdentity.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Domain/ConversionJob.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ConversionJob.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ConversionJob~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ConversionJob.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ConversionJob.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Domain/PackagingInfo.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/PackagingInfo.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/PackagingInfo~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/PackagingInfo.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/PackagingInfo.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Domain/VideoMetadata.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/VideoMetadata.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/VideoMetadata~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/VideoMetadata.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/VideoMetadata.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/FFmpegCommandBuilder.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegCommandBuilder.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegCommandBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegCommandBuilder.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegCommandBuilder.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/FFmpegJobRunner.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegJobRunner.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegJobRunner~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegJobRunner.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegJobRunner.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/FFmpegMetadataTagMapper.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegMetadataTagMapper.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegMetadataTagMapper~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegMetadataTagMapper.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegMetadataTagMapper.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/FFmpegProgressParser.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegProgressParser.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegProgressParser~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegProgressParser.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegProgressParser.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/FFmpegToolchainLocator.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegToolchainLocator.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegToolchainLocator~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegToolchainLocator.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/FFmpegToolchainLocator.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/FFmpeg/ProcessRunner.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ProcessRunner.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ProcessRunner~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ProcessRunner.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ProcessRunner.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Intake/MediaFileIntake.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/MediaFileIntake.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/MediaFileIntake~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/MediaFileIntake.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/MediaFileIntake.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Intake/MediaProbe.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/MediaProbe.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/MediaProbe~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/MediaProbe.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/MediaProbe.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Intake/OutputPathResolver.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/OutputPathResolver.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/OutputPathResolver~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/OutputPathResolver.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/OutputPathResolver.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Queue/AppViewModel.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/AppViewModel.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/AppViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/AppViewModel.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/AppViewModel.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Queue/ConversionQueueController.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ConversionQueueController.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ConversionQueueController~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ConversionQueueController.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/ConversionQueueController.dia"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/Sources/MKVHomeVideoCore/Queue/QueueProjectStore.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/QueueProjectStore.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/QueueProjectStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/QueueProjectStore.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoCore.build/QueueProjectStore.dia"
+  }
+}

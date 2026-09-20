@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoPackageTests.build/MKVHomeVideoPackageTests.d",
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoPackageTests.build/MKVHomeVideoPackageTests.o",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoPackageTests.build/primary.swiftdeps"
+  },
+  "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoPackageTests.derived/runner.swift": {
+    "object": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/peterbertella/Documents/ChatGPT/MKV/.build/x86_64-apple-macosx/release/MKVHomeVideoPackageTests.build/runner.dia"
+  }
+}
