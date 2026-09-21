@@ -4,6 +4,7 @@ import MKVHomeVideoCore
 
 struct MetadataEditorView: View {
     let job: ConversionJob
+    let allowsArtwork: Bool
     let save: (MediaProfile, VideoMetadataPatch) -> Void
 
     @Environment(\.dismiss) private var dismiss
@@ -30,8 +31,13 @@ struct MetadataEditorView: View {
     @State private var artworkURL: URL?
     @State private var clearedFields: Set<MetadataField>
 
-    init(job: ConversionJob, save: @escaping (MediaProfile, VideoMetadataPatch) -> Void) {
+    init(
+        job: ConversionJob,
+        allowsArtwork: Bool = true,
+        save: @escaping (MediaProfile, VideoMetadataPatch) -> Void
+    ) {
         self.job = job
+        self.allowsArtwork = allowsArtwork
         self.save = save
         let metadata = job.metadataOverride
         _profile = State(initialValue: job.profile)
@@ -115,14 +121,16 @@ struct MetadataEditorView: View {
                         TextField("Network", text: $network)
                     }
                 }
-                Section("Artwork") {
-                    HStack {
-                        Text(artworkURL?.lastPathComponent ?? "No cover art selected")
-                            .lineLimit(1)
-                            .foregroundStyle(artworkURL == nil ? .secondary : .primary)
-                        Spacer()
-                        Button("Choose…", action: chooseArtwork)
-                        if artworkURL != nil { Button("Clear") { artworkURL = nil } }
+                if allowsArtwork {
+                    Section("Artwork") {
+                        HStack {
+                            Text(artworkURL?.lastPathComponent ?? "No cover art selected")
+                                .lineLimit(1)
+                                .foregroundStyle(artworkURL == nil ? .secondary : .primary)
+                            Spacer()
+                            Button("Choose…", action: chooseArtwork)
+                            if artworkURL != nil { Button("Clear") { artworkURL = nil } }
+                        }
                     }
                 }
             }

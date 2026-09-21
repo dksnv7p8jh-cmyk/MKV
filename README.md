@@ -29,4 +29,6 @@ The result is at `dist/MKV Home Video.app`. On first launch, the app checks for 
 4. Start the sequential conversion queue. The app saves batches locally, reports progress, and retains failed jobs for retrying.
 5. Reveal the completed MP4 and import it into Apple TV.
 
+To clean up an already converted file, choose **Edit MP4 Metadata…**. The app rewrites the MP4 container metadata in place while stream-copying the existing media, so video and audio are not re-encoded. It first writes a temporary sibling file and replaces the original only after the edit succeeds. Cover-art changes remain available when converting MKVs; this in-place path preserves existing artwork.
+
 Apple TV decides which imported metadata fields it shows, but the app writes the associated MP4/iTunes-style tags that FFmpeg supports.

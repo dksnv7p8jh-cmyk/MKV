@@ -51,3 +51,14 @@ func filtersMKVFiles() {
 
     #expect(accepted.map(\.lastPathComponent) == ["a.mkv", "b.MKV"])
 }
+
+@Test("only mp4 files are accepted for metadata editing regardless of extension case")
+func filtersMP4Files() {
+    let accepted = MediaFileIntake.mp4Files(in: [
+        URL(filePath: "/Media/a.mp4"),
+        URL(filePath: "/Media/b.MP4"),
+        URL(filePath: "/Media/c.mkv"),
+    ])
+
+    #expect(accepted.map(\.lastPathComponent) == ["a.mp4", "b.MP4"])
+}

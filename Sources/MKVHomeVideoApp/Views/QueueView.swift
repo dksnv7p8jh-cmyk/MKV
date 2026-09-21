@@ -32,7 +32,7 @@ struct QueueView: View {
         .background(isDropTargeted ? Color.accentColor.opacity(0.08) : .clear)
         .onDrop(of: [.fileURL], isTargeted: $isDropTargeted, perform: acceptDrop)
         .sheet(item: $editingJob) { job in
-            MetadataEditorView(job: job) { profile, patch in
+            MetadataEditorView(job: job, allowsArtwork: job.operation == .conversion) { profile, patch in
                 model.updateJobMetadata(id: job.id, profile: profile, metadataOverride: patch)
             }
         }
@@ -69,6 +69,7 @@ struct QueueView: View {
             Spacer()
             Button("Add Files…", action: chooseFiles)
             Button("Add Folder…", action: chooseFolder)
+            Button("Edit MP4 Metadata…", action: chooseMP4MetadataFiles)
             Button("Destination…", action: chooseDestination)
         }
         .padding()
@@ -82,6 +83,7 @@ struct QueueView: View {
             Text("Add files or folders to create a batch. Source MKVs are never modified.")
         } actions: {
             Button("Choose MKV Files…", action: chooseFiles)
+            Button("Edit MP4 Metadata…", action: chooseMP4MetadataFiles)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -122,17 +124,20 @@ struct QueueView: View {
             if model.controller.isExecuting {
                 Button("Pause After Current") { model.controller.pauseAfterCurrent() }
             } else {
-                Button("Start Conversion") {
+                Button("Start Queue") {
                     Task { await model.controller.start() }
                 }
                 .keyboardShortcut(.defaultAction)
-                .disabled(model.jobs.isEmpty || model.destinationDirectory == nil)
+                .disabled(model.jobs.isEmpty || (model.jobs.contains { $0.operation == .conversion } && model.destinationDirectory == nil))
             }
         }
         .padding()
     }
 
     private var destinationDescription: String {
+        if !model.jobs.isEmpty, model.jobs.allSatisfy({ $0.operation == .metadataEdit }) {
+            return "Metadata edits update selected MP4 files in place."
+        }
         if let destination = model.destinationDirectory {
             return "Pending output: \(destination.path)"
         }
@@ -167,6 +172,20 @@ struct QueueView: View {
         let files = (FileManager.default.enumerator(at: folder, includingPropertiesForKeys: [.isRegularFileKey], options: options)?
             .allObjects as? [URL]) ?? []
         add(files)
+    }
+
+    private func chooseMP4MetadataFiles() {
+        guard let urls = NativeOpenPanel.chooseFiles(
+            contentTypes: [.mpeg4Movie],
+            allowsMultipleSelection: true,
+            message: "Choose MP4 files whose metadata you want to update in place.",
+            prompt: "Edit Metadata"
+        ) else { return }
+        do {
+            try model.addMP4MetadataFiles(urls)
+        } catch {
+            errorMessage = error.localizedDescription
+        }
     }
 
     private func chooseDestination() {

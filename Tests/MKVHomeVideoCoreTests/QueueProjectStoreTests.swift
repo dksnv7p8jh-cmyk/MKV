@@ -29,6 +29,21 @@ func projectRoundTrips() throws {
     #expect(try store.load() == project)
 }
 
+@Test("saved conversion queues without an operation field remain conversion jobs")
+func legacyJobDefaultsToConversionOperation() throws {
+    let job = ConversionJob(
+        sourceURL: URL(filePath: "/Media/Test.mkv"),
+        destinationURL: URL(filePath: "/Exports/Test.mp4")
+    )
+    var object = try #require(JSONSerialization.jsonObject(with: JSONEncoder().encode(job)) as? [String: Any])
+    object.removeValue(forKey: "operation")
+    let legacyData = try JSONSerialization.data(withJSONObject: object)
+
+    let decoded = try JSONDecoder().decode(ConversionJob.self, from: legacyData)
+
+    #expect(decoded.operation == .conversion)
+}
+
 @Test("interrupted running work becomes queued on load")
 func loadRequeuesInterruptedRunningJob() throws {
     let directory = try TemporaryDirectory.make()

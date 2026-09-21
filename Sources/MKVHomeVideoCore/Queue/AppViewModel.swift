@@ -116,7 +116,7 @@ public final class AppViewModel {
         var jobs = controller.jobs
         var reserved = outputURLsOnDisk(in: url)
             + jobs.filter { $0.status == .completed || $0.status == .running }.map(\.destinationURL)
-        for index in jobs.indices where jobs[index].status != .completed && jobs[index].status != .running {
+        for index in jobs.indices where jobs[index].operation == .conversion && jobs[index].status != .completed && jobs[index].status != .running {
             guard let outputURL = try? OutputPathResolver.uniqueOutputURL(
                 sourceURL: jobs[index].sourceURL,
                 destinationDirectory: url,
@@ -152,6 +152,20 @@ public final class AppViewModel {
             )
             jobs.append(ConversionJob(sourceURL: sourceURL, destinationURL: outputURL))
             reserved.append(outputURL)
+        }
+        controller.replaceJobs(jobs, destinationDirectory: destinationDirectory)
+    }
+
+    public func addMP4MetadataFiles(_ urls: [URL]) throws {
+        guard !controller.isExecuting else { throw AppViewModelError.queueIsExecuting }
+        let sourceURLs = MediaFileIntake.mp4Files(in: urls)
+        var jobs = controller.jobs
+        for sourceURL in sourceURLs {
+            jobs.append(ConversionJob(
+                sourceURL: sourceURL,
+                destinationURL: sourceURL,
+                operation: .metadataEdit
+            ))
         }
         controller.replaceJobs(jobs, destinationDirectory: destinationDirectory)
     }

@@ -33,7 +33,7 @@ struct QueueRowView: View {
             Menu {
                 Button("Preview", action: preview)
                 Button("Edit Metadata…", action: editMetadata)
-                if job.status == .completed { Button("Reveal Output", action: reveal) }
+                if job.status == .completed { Button(job.operation == .metadataEdit ? "Reveal File" : "Reveal Output", action: reveal) }
                 if job.status == .failed || job.status == .skipped || job.status == .paused { Button("Retry", action: retry) }
                 if job.status == .queued || job.status == .failed { Button("Skip", action: skip) }
                 if job.status != .running {
@@ -56,9 +56,9 @@ struct QueueRowView: View {
     private var statusText: String {
         switch job.status {
         case .queued: "Queued"
-        case .running: "Converting \(Int(job.progress * 100))%"
+        case .running: job.operation == .metadataEdit ? "Updating metadata \(Int(job.progress * 100))%" : "Converting \(Int(job.progress * 100))%"
         case .paused: "Paused"
-        case .completed: "Complete"
+        case .completed: job.operation == .metadataEdit ? "Metadata updated" : "Complete"
         case .failed: "Failed"
         case .skipped: "Skipped"
         }

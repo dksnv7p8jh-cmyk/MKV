@@ -75,4 +75,30 @@ public struct FFmpegCommandBuilder: Sendable {
 
         return FFmpegCommand(executableURL: toolchain.ffmpegURL, arguments: arguments)
     }
+
+    public func makeMetadataEditCommand(
+        toolchain: FFmpegToolchain,
+        sourceURL: URL,
+        outputURL: URL,
+        metadata: ResolvedVideoMetadata
+    ) throws -> FFmpegCommand {
+        guard sourceURL.isFileURL, outputURL.isFileURL else {
+            throw FFmpegCommandBuilderError.invalidFileURL
+        }
+
+        var arguments = [
+            "-hide_banner", "-n",
+            "-i", sourceURL.path,
+            "-map", "0",
+            "-map_metadata", "-1",
+            "-c", "copy",
+            "-movflags", "+faststart",
+            "-progress", "pipe:1",
+            "-nostats",
+        ]
+        arguments += FFmpegMetadataTagMapper.arguments(for: metadata)
+        arguments.append(outputURL.path)
+
+        return FFmpegCommand(executableURL: toolchain.ffmpegURL, arguments: arguments)
+    }
 }

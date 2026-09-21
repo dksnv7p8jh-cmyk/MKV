@@ -24,6 +24,18 @@ private actor RecordingCommandRunner: FFmpegCommandRunning {
     }
 }
 
+private actor MetadataWritingCommandRunner: FFmpegCommandRunning {
+    func run(
+        _ command: FFmpegCommand,
+        durationMicroseconds: Int64?,
+        onProgress: @escaping @Sendable (FFmpegProgressEvent) -> Void
+    ) async throws -> ProcessOutcome {
+        try Data("edited metadata".utf8).write(to: URL(filePath: try #require(command.arguments.last)))
+        onProgress(.completed)
+        return .succeeded
+    }
+}
+
 @Test("job runner probes source and passes Apple-compatible command to FFmpeg")
 func jobRunnerBuildsAndRunsCommand() async {
     let commandRunner = RecordingCommandRunner()
@@ -69,6 +81,23 @@ func jobRunnerRefusesExistingOutput() async throws {
 
     #expect(outcome == .failed(exitCode: -2, diagnostic: "Output already exists: \(output.path)"))
     #expect(await commandRunner.command == nil)
+}
+
+@Test("metadata edit replaces its source only after the temporary output succeeds")
+func metadataEditReplacesOriginalAfterSuccessfulWrite() async throws {
+    let source = FileManager.default.temporaryDirectory.appending(path: "\(UUID().uuidString).mp4")
+    try Data("original metadata".utf8).write(to: source)
+    defer { try? FileManager.default.removeItem(at: source) }
+    let runner = FFmpegJobRunner(
+        toolchain: .fixture,
+        commandRunner: MetadataWritingCommandRunner()
+    )
+    let job = ConversionJob(sourceURL: source, destinationURL: source, operation: .metadataEdit)
+
+    let outcome = await runner.run(job) { _ in }
+
+    #expect(outcome == .succeeded)
+    #expect(try Data(contentsOf: source) == Data("edited metadata".utf8))
 }
 
 private final class ToolchainRecorder: @unchecked Sendable {

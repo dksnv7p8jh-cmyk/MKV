@@ -70,6 +70,9 @@ public final class FFmpegJobRunner: @unchecked Sendable, ConversionRunning {
         onProgress: @escaping @Sendable (FFmpegProgressEvent) -> Void
     ) async -> ProcessOutcome {
         do {
+            if job.operation == .metadataEdit {
+                return try await editMetadata(job, onProgress: onProgress)
+            }
             guard !fileManager.fileExists(atPath: job.destinationURL.path) else {
                 throw FFmpegJobRunnerError.outputAlreadyExists(job.destinationURL)
             }
@@ -93,14 +96,50 @@ public final class FFmpegJobRunner: @unchecked Sendable, ConversionRunning {
             return .failed(exitCode: -1, diagnostic: diagnostic)
         }
     }
+
+    private func editMetadata(
+        _ job: ConversionJob,
+        onProgress: @escaping @Sendable (FFmpegProgressEvent) -> Void
+    ) async throws -> ProcessOutcome {
+        guard fileManager.fileExists(atPath: job.sourceURL.path) else {
+            throw FFmpegJobRunnerError.sourceMissing(job.sourceURL)
+        }
+        let temporaryOutput = job.sourceURL
+            .deletingLastPathComponent()
+            .appendingPathComponent(".metadata-edit-\(UUID().uuidString).mp4")
+        defer { try? fileManager.removeItem(at: temporaryOutput) }
+
+        let command = try commandBuilder.makeMetadataEditCommand(
+            toolchain: toolchain,
+            sourceURL: job.sourceURL,
+            outputURL: temporaryOutput,
+            metadata: job.resolvedMetadata
+        )
+        let outcome = try await commandRunner.run(
+            command,
+            durationMicroseconds: nil,
+            onProgress: onProgress
+        )
+        guard outcome == .succeeded else { return outcome }
+        do {
+            _ = try fileManager.replaceItemAt(job.sourceURL, withItemAt: temporaryOutput)
+            return .succeeded
+        } catch {
+            throw FFmpegJobRunnerError.unableToReplaceSource(job.sourceURL)
+        }
+    }
 }
 
 public enum FFmpegJobRunnerError: LocalizedError, Sendable, Equatable {
     case outputAlreadyExists(URL)
+    case sourceMissing(URL)
+    case unableToReplaceSource(URL)
 
     public var errorDescription: String? {
         switch self {
         case .outputAlreadyExists(let url): "Output already exists: \(url.path)"
+        case .sourceMissing(let url): "Source file is missing: \(url.path)"
+        case .unableToReplaceSource(let url): "Could not safely replace the edited file: \(url.path)"
         }
     }
 }

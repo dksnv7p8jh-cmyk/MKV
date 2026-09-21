@@ -120,6 +120,39 @@ func batchMetadataSetsTVProfileAndFields() throws {
     #expect(model.jobs.allSatisfy { $0.sharedMetadata.seasonNumber == 2 })
 }
 
+@Test("adding MP4s queues metadata edits without an output destination")
+@MainActor
+func addingMP4sCreatesInPlaceMetadataJobs() throws {
+    let model = AppViewModel(toolchainProvider: TestToolchainProvider.fixture)
+    let file = URL(filePath: "/Media/Arrival.mp4")
+
+    try model.addMP4MetadataFiles([file])
+
+    #expect(model.jobs.count == 1)
+    #expect(model.jobs[0].operation == .metadataEdit)
+    #expect(model.jobs[0].sourceURL == file)
+    #expect(model.jobs[0].destinationURL == file)
+}
+
+@Test("changing the conversion destination does not redirect queued MP4 metadata edits")
+@MainActor
+func changingDestinationPreservesMetadataEditSource() throws {
+    let firstDirectory = try makeAppViewModelTemporaryDirectory()
+    let secondDirectory = try makeAppViewModelTemporaryDirectory()
+    defer {
+        try? FileManager.default.removeItem(at: firstDirectory)
+        try? FileManager.default.removeItem(at: secondDirectory)
+    }
+    let model = AppViewModel(toolchainProvider: TestToolchainProvider.fixture, destinationDirectory: firstDirectory)
+    let file = URL(filePath: "/Media/Arrival.mp4")
+    try model.addMP4MetadataFiles([file])
+
+    model.setDestinationDirectory(secondDirectory)
+
+    #expect(model.jobs[0].operation == .metadataEdit)
+    #expect(model.jobs[0].destinationURL == file)
+}
+
 private func makeAppViewModelTemporaryDirectory() throws -> URL {
     let url = FileManager.default.temporaryDirectory
         .appending(path: UUID().uuidString, directoryHint: .isDirectory)

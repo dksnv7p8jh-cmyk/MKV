@@ -121,3 +121,23 @@ func decodedSubtitleIndexesUseSubtitleOrdinal() throws {
     #expect(command.arguments.containsSubsequence(["-map", "0:s:0?"]))
     #expect(!command.arguments.contains("0:s:2?"))
 }
+
+@Test("metadata-only command copies every existing stream while replacing container tags")
+func metadataEditCommandCopiesStreamsAndClearsExistingTags() throws {
+    let command = try FFmpegCommandBuilder().makeMetadataEditCommand(
+        toolchain: .fixture,
+        sourceURL: URL(filePath: "/Media/Arrival.mp4"),
+        outputURL: URL(filePath: "/Media/.Arrival.metadata-edit.mp4"),
+        metadata: ResolvedVideoMetadata(
+            profile: .movie,
+            shared: .init(title: "Arrival", genre: "Science Fiction"),
+            override: .init()
+        )
+    )
+
+    #expect(command.arguments.containsSubsequence(["-map", "0"]))
+    #expect(command.arguments.containsSubsequence(["-c", "copy"]))
+    #expect(command.arguments.containsSubsequence(["-map_metadata", "-1"]))
+    #expect(command.arguments.containsSubsequence(["-metadata", "title=Arrival"]))
+    #expect(command.arguments.last == "/Media/.Arrival.metadata-edit.mp4")
+}
